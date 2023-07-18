@@ -2,7 +2,11 @@
 
 mkdir -p ~/Documents/GitHub
 git clone https://github.com/SteavenGamerYT/dot-files ~/Documents/GitHub/dot-files
-sudo apt install zsh zsh-syntax-highlighting autojump zsh-autosuggestions neofetch xclip lolcat i3 papirus-icon-theme lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings nano nemo nemo-fileroller mpv vlc gnome-mpv firefox-esr flatpak lxappearance -y
+sudo apt install zsh zsh-syntax-highlighting autojump zsh-autosuggestions neofetch xclip lolcat i3 papirus-icon-theme lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings nano nemo nemo-fileroller mpv vlc gnome-mpv firefox-esr flatpak lxappearance xinput network-manager nm-applet picom policykit-1-gnome kdenlive gedit blueman flameshot curl playerctl -y
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser  -y
 mkdir ~/.zsh
 mkdir ~/.zsh/plugins/
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/plugins/powerlevel10k
